@@ -29,7 +29,6 @@ const News = () => {
 
   const editPopup = (news) => {
     setNewsItem({ ...news });
-console.log('news', news);
     openPopup();
   };
 

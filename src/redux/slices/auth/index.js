@@ -18,7 +18,6 @@ const authSlice = createSlice({
       localStorage.setItem("token", jwtToken);
     },
     setUserLoggedIn: (state, { payload }) => {
-      console.log('payload ', payload );
       state.userLoggedIn = payload ;
     },
   },

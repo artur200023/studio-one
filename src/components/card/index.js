@@ -13,8 +13,6 @@ const Card = ({ news, editPopup, index, fibNumber }) => {
     } catch (error) {}
   };
 
-  console.log("fibNumber", fibNumber);
-
   const isPrime = (num) => {
     for (let i = 2; i < num; i++) {
       if (num % i === 0) return false;

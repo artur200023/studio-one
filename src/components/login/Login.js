@@ -25,8 +25,6 @@ const Login = () => {
           initialValues={{ username: "admin", password: "12345" }}
           validationSchema={validationSchema}
           onSubmit={async (values, { setFieldError }) => {
-            console.log('values', values);
-
             const userInfo = {
               username: values.username,
               password: values.password
@@ -37,7 +35,6 @@ const Login = () => {
               navigate("/");
             } catch (error) {
               setFieldError("password", "Incorrect username or password");
-              console.log("error", error.message);
             }
           }}
         >
