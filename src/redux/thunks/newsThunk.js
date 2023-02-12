@@ -36,8 +36,6 @@ export const createNewsAction = createAsyncThunk(
   "createNewsExtraReducer",
   async (news) => {
     const url = "http://localhost:3030/news";
-    console.log('createNewsAction', news);
-
     try {
       await axios.post(url, { ...news});
     } catch (error) {
@@ -49,7 +47,6 @@ export const createNewsAction = createAsyncThunk(
 export const updateNewsAction = createAsyncThunk(
   "updateNewsAction",
   async (news) => {
-    console.log('updateNewsAction', news);
     const url = `http://localhost:3030/news/${news.id}`;
     try {
       await axios.put(url, { ...news });

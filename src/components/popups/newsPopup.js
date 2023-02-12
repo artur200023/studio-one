@@ -22,9 +22,6 @@ const NewsPopup = ({ news, openProps, setShowPopup }) => {
       image,
     };
 
-    console.log("newsId", newsId);
-    console.log("payload", payload);
-
     payload.id = !newsId ? new Date().getTime() : newsId;
 
     try {
@@ -38,8 +35,6 @@ const NewsPopup = ({ news, openProps, setShowPopup }) => {
 
       shorOrHiderPopup(false)
     } catch (error) {}
-
-    console.log("payload", payload);
   };
 
   const shorOrHiderPopup = (value) => {

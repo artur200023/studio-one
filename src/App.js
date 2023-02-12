@@ -13,23 +13,16 @@ function App() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { pathname } = useLocation();
-  console.log("pathname", pathname);
   const userLoggedIn = useSelector(userLoggedInSelector);
   
   const loggedIn = localStorage.getItem("isLoggedIn");
   if (loggedIn == 'true') {
      dispatch(setUserLoggedIn(true));
-    console.log('loggedIn ', loggedIn );
   }
 
 
   useEffect( () => {
-    /// nayuma ete reduxum userLoggedIn false - a u logini kam registeri ejum ches profile-i ej
-   
-    console.log('userLoggedIn ', userLoggedIn );
-
     if (!userLoggedIn) {
-      console.log(666);
       navigate("/login");
     }
   }, [userLoggedIn]);
