@@ -1,8 +1,23 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import img from "../../img";
 import { DefaultLayout } from "../../layouts/DefaultLayout";
 import "./profile.css";
 
+
 const Profile = () => {
+  const navigate = useNavigate()
+
+
+useEffect(()=>{
+  const isLoggedIn = localStorage.getItem('isLoggedIn') 
+  if(!isLoggedIn  || isLoggedIn == 'false') {
+    navigate('/login')
+  }
+},[])
+  
+
+
   return (
     <>
       <div className="container">
