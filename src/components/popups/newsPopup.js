@@ -14,6 +14,12 @@ const NewsPopup = ({ news, openProps, setShowPopup }) => {
   const [content, setContent] = useState(null);
   const [image, setImage] = useState(null);
 
+  const clearValues = () => {
+    setTitle(null);
+    setContent(null);
+    setImage(null);
+  };
+
   const submitForm = async (e) => {
     e.preventDefault();
     const payload = {
@@ -33,7 +39,8 @@ const NewsPopup = ({ news, openProps, setShowPopup }) => {
 
       await dispatch(recieveNews());
 
-      shorOrHiderPopup(false)
+      shorOrHiderPopup(false);
+      clearValues();
     } catch (error) {}
   };
 
@@ -84,7 +91,7 @@ const NewsPopup = ({ news, openProps, setShowPopup }) => {
           value={image}
           onChange={(e) => setImage(e.target.value)}
         ></input>
-        <button className="add">{newsId?'Edit':'Add'}</button>
+        <button className="add">{newsId ? "Edit" : "Add"}</button>
       </form>
     </div>
   ) : null;

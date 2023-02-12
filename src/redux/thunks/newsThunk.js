@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 export const recieveNews = createAsyncThunk("recieveNews", async () => {
   const url = "http://localhost:3030/news";
 
@@ -37,7 +36,7 @@ export const createNewsAction = createAsyncThunk(
   async (news) => {
     const url = "http://localhost:3030/news";
     try {
-      await axios.post(url, { ...news});
+      await axios.post(url, { ...news });
     } catch (error) {
       throw new Error(error.message);
     }
@@ -56,16 +55,11 @@ export const updateNewsAction = createAsyncThunk(
   }
 );
 
-
-
-export const deleteNews = createAsyncThunk(
-  "deleteNews",
-  async (news) => {
-    const url = `http://localhost:3030/news/${news.id}`;
-    try {
-      await axios.delete(url);
-    } catch (error) {
-      throw new Error(error.message);
-    }
+export const deleteNews = createAsyncThunk("deleteNews", async (news) => {
+  const url = `http://localhost:3030/news/${news.id}`;
+  try {
+    await axios.delete(url);
+  } catch (error) {
+    throw new Error(error.message);
   }
-);
+});

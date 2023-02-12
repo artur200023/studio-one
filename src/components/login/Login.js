@@ -27,7 +27,7 @@ const Login = () => {
           onSubmit={async (values, { setFieldError }) => {
             const userInfo = {
               username: values.username,
-              password: values.password
+              password: values.password,
             };
             try {
               await dispatch(userLogin(userInfo));
@@ -39,14 +39,46 @@ const Login = () => {
           }}
         >
           {({ isSubmitting }) => (
-            <Form>
-              <Field type="text" name="username" />
-              <Field type="password" name="password" />
-              <ErrorMessage name="password" component="div" />
+            <Form className="login_form">
+              <h2 className="sign_in_text">Login to your Web App</h2>
+              <h5 className="hint">Use your email to sign in</h5>
+              <div className="art">
+                <h5>
+                  For user with "admin" role use"admmin@flatlogic.com /
+                  password" to login
+                </h5>
+              </div>
+              <Link to="" className="link">
+                Forgot password?
+              </Link>
+              <div className="inps">
+                <Field className="email_inp" type="text" name="username" />
+                <Field
+                  className="password_inp"
+                  type="password"
+                  name="password"
+                />
+                <button type="submit" className="login_btn">
+                  Login
+                </button>
+                <h5 className="help_text">or sign in with</h5>
+                <div className="halp_links">
+                  <Link className="google_link" to="/news">
+                    GOOGLE
+                  </Link>
+                  <Link className="microsoft_link" to="">
+                    MICROSOFT
+                  </Link>
+                </div>
+                <h5 className="info_text">
+                  Don't have an account? Sign up now!
+                </h5>
+                <Link className="create_link" to="">
+                  Create an Account
+                </Link>
+              </div>
 
-              <button type="submit" >
-                Submit
-              </button>
+              <ErrorMessage name="password" component="div" />
             </Form>
           )}
         </Formik>

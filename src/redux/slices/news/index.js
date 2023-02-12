@@ -22,6 +22,5 @@ const newsSlice = createSlice({
 
 export const newsSelector = (state) => state.news.newsList;
 
-// export const {  updateNews, deleteNews } = newsSlice.actions;
 
 export default newsSlice.reducer;

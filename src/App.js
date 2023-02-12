@@ -6,7 +6,6 @@ import News from "./pages/news";
 import "./App.css";
 
 function App() {
-
   return (
     <div className="App">
       <Routes>

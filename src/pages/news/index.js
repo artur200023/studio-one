@@ -23,10 +23,6 @@ const News = () => {
     setShowPopup(true);
   };
 
-  const closePopup = () => {
-    setShowPopup(false);
-  };
-
   const editPopup = (news) => {
     setNewsItem({ ...news });
     openPopup();
@@ -41,6 +37,7 @@ const News = () => {
   };
 
   const fib = fibonacci(newsList.length - 1);
+
   return (
     <>
       <div className="container">

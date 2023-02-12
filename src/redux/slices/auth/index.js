@@ -18,13 +18,14 @@ const authSlice = createSlice({
       localStorage.setItem("token", jwtToken);
     },
     setUserLoggedIn: (state, { payload }) => {
-      state.userLoggedIn = payload ;
+      state.userLoggedIn = payload;
     },
   },
 });
 
 export const userLoggedInSelector = (state) => state.auth.userLoggedIn;
 
-export const { userLogin, setUserInformation,   setUserLoggedIn } = authSlice.actions;
+export const { userLogin, setUserInformation, setUserLoggedIn } =
+  authSlice.actions;
 
 export default authSlice.reducer;

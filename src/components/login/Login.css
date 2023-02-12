@@ -133,6 +133,7 @@
 
 .google_link:hover {
     background-color: #ebb734b6;
+    color: white;
 }
 
 .microsoft_link {
@@ -149,6 +150,7 @@
 
 .microsoft_link:hover {
     background-color: #ff5574ca;
+    color: white;
 }
 
 
