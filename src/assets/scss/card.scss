@@ -1,0 +1,22 @@
+.news_list {
+    display: flex;
+    flex-wrap: wrap;
+    // list-style-type: none;
+    // margin: 0;
+    // padding: 0;
+
+
+    .card_block {
+        padding: 0 5px;
+        width: 33.33333%;
+        flex: 0 0 auto;
+
+        .news_content {
+            flex: 1 1 auto;
+            padding: 1rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "title": "Breaking News: New Vaccine Developed",
+            "author": "Jane Doe",
+            "createdAt": "2022-12-15T12:00:00Z",
+            "content": "A new vaccine has been developed to combat the latest strain of the virus. The vaccine is highly effective and has undergone rigorous testing. It is now available to the general public.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        },
+        {
+            "id": 2,
+            "title": "New Study Shows Benefits of Exercise",
+            "author": "John Doe",
+            "createdAt": "2022-11-30T10:00:00Z",
+            "content": "A new study has shown the numerous benefits of regular exercise. These benefits include improved heart health, stronger bones and muscles, and a reduced risk of chronic diseases such as diabetes and heart disease.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Breaking News: New Vaccine Developed",
+            "author": "Jane Doe",
+            "createdAt": "2022-12-15T12:00:00Z",
+            "content": "A new vaccine has been developed to combat the latest strain of the virus. The vaccine is highly effective and has undergone rigorous testing. It is now available to the general public.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        },
+        {
+            "id": 4,
+            "title": "New Study Shows Benefits of Exercise",
+            "author": "John Doe",
+            "createdAt": "2022-11-30T10:00:00Z",
+            "content": "A new study has shown the numerous benefits of regular exercise. These benefits include improved heart health, stronger bones and muscles, and a reduced risk of chronic diseases such as diabetes and heart disease.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        },
+        {
+            "id": 5,
+            "title": "New Study Shows Benefits of Exercise",
+            "author": "John Doe",
+            "createdAt": "2022-11-30T10:00:00Z",
+            "content": "A new study has shown the numerous benefits of regular exercise. These benefits include improved heart health, stronger bones and muscles, and a reduced risk of chronic diseases such as diabetes and heart disease.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Breaking News: New Vaccine Developed",
+            "author": "Jane Doe",
+            "createdAt": "2022-12-15T12:00:00Z",
+            "content": "A new vaccine has been developed to combat the latest strain of the virus. The vaccine is highly effective and has undergone rigorous testing. It is now available to the general public.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        },
+        {
+            "id": 7,
+            "title": "New Study Shows Benefits of Exercise",
+            "author": "John Doe",
+            "createdAt": "2022-11-30T10:00:00Z",
+            "content": "A new study has shown the numerous benefits of regular exercise. These benefits include improved heart health, stronger bones and muscles, and a reduced risk of chronic diseases such as diabetes and heart disease.",
+            "image": "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        }
+    ]
+}

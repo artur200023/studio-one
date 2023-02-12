@@ -1,0 +1,110 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { userLogin, setUserInformation } from "../../redux/slices/auth";
+import "./Login.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
+
+const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("admin");
+  const [password, setPassword] = useState("12345");
+
+  const validationSchema = yup.object().shape({
+    login: yup.string().required("is mandatory"),
+    password: yup
+      .string()
+      .typeError("must be a string")
+      .required("is mandatory"),
+  });
+
+  return (
+    <>
+      <div className="container">
+        <h2 className="title">Sing App React</h2>
+        <Formik
+          initialValues={{
+            username: "",
+            password: "",
+          }}
+        
+          validationSchema={validationSchema}
+          onSubmit={ (values, { setSubmitting, setFieldError }) => {
+            console.log("values", values);
+            return false;
+            
+            // const userInfo = {
+            //   username,
+            //   password,
+            // };
+            // try {
+            //   await dispatch(userLogin(userInfo));
+            //   await dispatch(setUserInformation());
+            //   navigate("/");
+            // } catch (error) {
+            //   // ES log arac message-@ pti dnes formikum vorpes validaciai error text
+            //   console.log("error", error.message);
+            // }
+
+            // console.log(actions);
+            // authUser();
+          }}
+        >
+          <Form className="login_form">
+            <h2 className="sign_in_text">Login to your Web App</h2>
+            <h5 className="hint">Use your email to sign in.</h5>
+            <div className="art">
+              <h5>
+                For user with "admin" role use"admin@flatlogic.com / password"
+                to login!
+              </h5>
+            </div>
+            <Link className="link" to="/">
+              Forgot password?
+            </Link>
+            <div className="inps">
+              <Field
+                className="email_inp"
+                placeholder="Login"
+                type={"text"}
+                name={"username"}
+              />
+              <Field
+                className="password_inp"
+                placeholder="Password"
+                type={"password"}
+                name={"password"}
+              />
+              <button
+                className="login_btn"
+                type="submit"
+              >
+                Login
+              </button>
+              <h5 className="help_text">or sign in with</h5>
+              <div className="halp_links">
+                <Link className="google_link" to="/news">
+                  GOOGLE
+                </Link>
+                <Link className="microsoft_link" to="/profile">
+                  MICROSOFT
+                </Link>
+              </div>
+              <h5 className="info_text">Don't have an account? Sign up now!</h5>
+              <Link className="create_link" to="/registr">
+                Create an Account
+              </Link>
+            </div>
+          </Form>
+        </Formik>
+        <h3 className="login_footer">
+          2023 © Sing App - React Admin Dashboard Template. By Flatlogic
+        </h3>
+      </div>
+    </>
+  );
+};
+
+export default Login;
